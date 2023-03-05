@@ -20,6 +20,7 @@ public:
     int solveMemo(int index, int endIndex, vector<int> &slices, int n, vector<vector<int>> &dp)
     {
         // base case
+        // first 
         if (n == 0 || index > endIndex)
             return 0;
 
