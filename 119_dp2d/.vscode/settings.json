@@ -16,6 +16,7 @@
     "bitset": "cpp",
     "initializer_list": "cpp",
     "utility": "cpp",
-    "map": "cpp"
+    "map": "cpp",
+    "string": "cpp"
   }
 }
