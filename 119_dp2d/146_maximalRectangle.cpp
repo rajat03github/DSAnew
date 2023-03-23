@@ -2,7 +2,7 @@
 using namespace std;
 class Solution
 {
-private:
+public:
     vector<int> nextSmallElement(vector<int> arr, int n)
     {
         stack<int> s;
@@ -74,5 +74,26 @@ public:
         }
 
         return area;
+    }
+    int maximalRectangle(vector<vector<char>> &matrix)
+    {
+        int maxi = INT_MIN;
+
+        vector<int> historgram(matrix[0].size(), 0);
+        for (int i = 0; i < matrix.size(); i++)
+        {
+            // To create Histogram array
+            for (int j = 0; j < historgram.size(); j++)
+            {
+                if (matrix[i][j] == '1')
+                {
+                    historgram[j]++;
+                }
+                else
+                    historgram[j] = 0;
+            }
+            maxi = max(maxi, largestRectangleArea(historgram));
+        }
+        return maxi;
     }
 };
